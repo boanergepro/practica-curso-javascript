@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Practica Calculadora con botones</title>
+		<link rel="stylesheet" type="text/css" href="bootstrap.css">
+	</head>
+
+	<body>
+		<center>
+			<br/>
+			<input type="text" ><br/>
+			<button type="button" onclick="num1()">1</button>
+			<button type="button" onclick="num2()">2</button>
+			<button type="button" onclick="num3()">3</button>
+			<button type="button" onclick="signoMas()">+</button><br/>
+			<button type="button" onclick="num4()">4</button>
+			<button type="button" onclick="num5()">5</button>
+			<button type="button" onclick="num6()">6</button>
+			<button type="button" onclick="signoMenos()">-</button><br/>
+			<button type="button" onclick="num7()">7</button>
+			<button type="button" onclick="num8()">8</button>
+			<button type="button" onclick="num9()">9</button>
+			<button type="button" onclick="signoEntre()">/</button><br/>
+			<button type="button" onclick="signoPor()">x</button>
+			<button type="button" onclick="num0()">0</button>
+			<button type="button" onclick="signoIgual()">=</button>
+			<button type="button" onclick="signoC()">C</button>
+
+		</center>
+			<script type="text/javascript">
+			//Signos------------------------------------------
+				var signoMas= function(){
+					var signoMas= "+";
+					parseInt(signoMas);
+					return signoMas;
+				}
+				var signoMenos= function(){
+					var signoMenos="-";
+					parseInt(signoMenos);
+					return signoMenos;
+				}
+				var signoEntre= function(){
+					var signoEntre="/";
+					parseInt(signoEntre);
+					return signoEntre;
+				}
+				var signoPor= function(){
+					var signoPor="*";
+					parseInt(signoPor);
+					return signoPor;
+				}
+				var signoIgual= function(){
+					var signoIgual="=";
+					parseInt(signoIgual);
+					return signoIgual;
+				}
+				var signoC= function(){
+					var signoC=C //Esto debera borrar toda la pantalla de la calculadora
+					return signoC;
+				}
+				//Numeros----------------------------------
+				var num1= function(){
+					var valor1=1;
+					return valor1;
+				}
+				var num2= function(){
+					var valor=2;
+					return valor2;
+				}
+				var num3= function(){
+					var valor3=3;
+					return valor3;
+				}
+
+				var num4= function(){
+					var valor4=4;
+					return valor4;
+				}
+				var num5= function(){
+					var valor5=5;
+					return valor5;
+				}
+				var num6= function(){
+					var valor6=6;
+					return valor6;
+				}
+
+				var num7= function(){
+					var valor7=7;
+					return valor7;
+				}
+				var num8= function(){
+					var valor8=8;
+					return valor8;
+				}
+				var num9= function(){
+					var valor9=9;
+					return valor9;
+				}
+
+				var num0= function(){
+					var valor0=0;
+					return valor0;
+				}
+			</script>
+	</body>
+</html>

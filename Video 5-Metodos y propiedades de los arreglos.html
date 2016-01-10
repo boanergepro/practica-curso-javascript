@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		
+		<meta charset="utf-8">
+		<title>Metodos y propiedades de los arreglos</title>
+		
+	</head>
+	<body>
+		
+		<script>
+			//Metodo length
+			/*
+			var amigos=["Alex","Pedro","Ramon","cesar"];
+			document.write("Metodo length: Contar los elementos del arreglo");
+			document.write("<br>Tienes " +amigos.length+ " amigos<br>");
+			document.write("Metodo length: Agregar un nuevo elemento al arreglo.");
+			amigos[amigos.length]="Fernando";
+			document.write("<br>Tienes "+amigos.length+" amigos<br>");
+			*/
+			//Metodo push()--Sirve para  agregar elementos a un arreglo
+			/*
+			var amigos= ["Pedro","Ramon","tony"];
+			amigos.push("Petra","carmen");
+			document.write("Los dos arreglos sumados dan: ");
+			for(var i=0; i < amigos.length; i++){
+				document.write("<br>=="+amigos[i]+"<br>");
+			}
+			*/
+			//Metodo pop()--Sirve para eliminar  el ultimo elemento  de un arreglo
+			/*
+			var  amigos=["Ramon","Petra","Tony"];
+			document.write("Arreglo sin usar el metodo 'pop()'<br>");
+			for(var i=0; i < amigos.length; i++){
+				document.write("<br>"+amigos[i]);
+			}
+			document.write("<br>");
+			document.write("Arreglo usando el metodo 'pop()'<br>");
+			amigos.pop();
+			for(var t=0; t < amigos.length; t++){
+				document.write("<br>"+amigos[t]);
+			}
+			*/
+			//Metodo concat()--Sirve para concatenar dos  arreglos
+			/*
+			var amigos=["Petra","Carmen"];
+			var amigos2=["Carlos","Rincon"];
+			var amigos3=amigos.concat(amigos2);
+			
+			document.write("Antes de usar el metodo 'concat()'<br>");
+			document.write("<br>"+amigos[0]+"<br>");
+			document.write("<br>"+amigos[1]+"<br>");
+			
+			document.write("<br>Arreglo despues de usar el  meettodo 'concat()'<br>");
+			
+			for(var i=0; i < amigos3.length; i++){
+				document.write("<br>"+amigos3[i]+"<br>");
+			}
+			*/
+			///Metodo join()--Sirve para establecer un caractaer como divisor entre los elementos del arreglo
+			/*
+			var amigos=["Ramon","Pedro","Carmen"];
+			document.write("Arreglo sin aplicar el metodo 'join()'");
+			document.write("<br>"+amigos+"<br>");
+			document.write("<br>Arregloaplicando el metodo 'join()'<br>");
+			document.write(amigos.join("/"));
+			*/
+			//Metodo sort()--Sirve para ordenar los elementos del arreglo
+			var amigos=["2","1","3"];
+			
+			document.write("Antes de aplicar el metodo 'sort()'<br>");
+			document.write("<br>"+amigos+"<br>");
+			var ordenados= amigos.sort();
+			document.write("Despues de aplicar el metodo 'sort()'<br>");
+			document.write("<br>"+ordenados);
+		</script>
+		
+	</body>
+	
+</html>

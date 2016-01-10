@@ -1,0 +1,41 @@
+<!DOCTPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Funciones</title>
+	</heaad>
+	<body>
+		<script>
+			
+			//Funciones
+			//Funcion que  sume dos numeros
+			function suma(num1,num2){
+				var a= num1;
+				var b= num2;
+				
+				return a+b;
+			}
+			document.write("El resultado de la  Funcion que suma es: "+suma(10,20));
+			//Funcion que devuelve el valor maximo  entre dos numeros
+			function numeroMaximo(valor1,valor2){
+				if(valor1 >valor2 ){
+					return valor1;
+				}else{ return valor2;}
+			}
+			document.write("<br>");
+			document.write("El numero maximo es: "+numeroMaximo(17,5));
+			
+			//Ademas las funciones tambien se pueden almacenar en una variable
+			//Ejemplo:
+			var saludoOficial = function(){
+				var saludo="Hola Buen dia";
+			
+			return saludo;
+			}
+			document.write("<br>");
+			document.write("Resultado de la funcion almecenada en una variable es: "+ saludoOficial());
+
+			
+		</script>
+	</body>
+</html>

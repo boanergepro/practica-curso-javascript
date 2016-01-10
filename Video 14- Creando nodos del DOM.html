@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+	<meta charset="utf-8">
+		<title>Creando Nodos del DOM</title>
+	</head>
+	<body>
+		<h1>Este es el titulo principal</h1>
+		<div id="subtitulo">
+			
+		</div>
+		<script type="text/javascript">
+		//Pasos
+		//1.-Crear el elemento
+		var elemento= document.createElement("h2");
+		//2.-Crear un nodo de texto
+		var contenido= document.createTextNode("Este es el subtitulo");
+		//3.-Añadir el nodo de texto al elemento
+		elemento.appendChild(contenido);
+		//4.-Agregar atributos al elemento
+		elemento.setAttribute("align","center");
+		//5.-Agregar el elemnto al documento
+		document.getElementById("subtitulo").appendChild(elemento);
+		</script>
+	</body>
+</html>

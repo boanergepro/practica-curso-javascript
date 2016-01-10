@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Scope de  JavaScript</title>	
+	</head>
+	<body>
+		<script>
+			//Global-Podemos acceder a ella desde cualquier parte del codigo
+			/*Local-Variables creadas dentro de una funcion, solo pueden ser acceedidas desde su funcion
+			o una funcion anidada*/
+			
+			//Niveles del Scope de JavaScrip
+			function Externa(){
+				//Desde esta funcion no podemos  acceder a las variables de la funcion Interna.
+				function Interna(){
+					//Desde esta funcion podemos acceder a las variables dentro de la funcion Externa y mas afuera.
+				}
+			}
+			
+			//Como protejer nuestras variables de scripts de terceros, para que no sean modificadas.
+			//Estructura:
+			(function(){
+				//Sentencias
+			}())
+		</script>
+	</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+	</head>
+	<body>
+		<script>
+			/*Condicionales, permiten que el programa tome
+			desiciones en su ejecucion.
+			usamos las palabras reservadas if, else is, y  else.
+			*/
+			var nombre,
+			    edad;
+			    
+			    nombre= prompt("Ingrese su nombre: ");
+			    edad= prompt("Ingrese su edad: ");
+			    
+			    if(edad < 12){
+			    	  document.write("Bienvenid@ "+nombre);
+			    	  document.write("<br>Tu Clasificación es: ");
+			    	  document.write("<br>Niños...")
+			    }
+			    else if(edad > 11 && edad <18){
+			    	  document.write("Bienvenid@ "+nombre);
+			    	  document.write("<br>Tu clasificación es: ");
+			    	  document.write("<br>Prejoven...");
+			    }
+			    else if(edad > 17 && edad < 26){
+			    	  document.write("Bienvenid@ "+ nombre);
+			    	  document.write("<br>Tu clasificacion es: ");
+			    	  document.write("<br>Joven...");
+			    }
+			    else{
+			    	  document.write("Bienvenid@ "+ nombre);
+			    	  document.write("<br>Tu clasificacion es: ");
+			    	  document.write("<br>Adulto...");
+			    }
+		</script>
+	</body>			
+</html>

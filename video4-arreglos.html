@@ -1,0 +1,39 @@
+<!-- Este codigo  tiene un error en el JavaScript ya que no se ejecuta-->
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="uttf-8">
+		<title>Video 4: Arreglos</title>
+	</head>
+	<body>
+		<script>
+			//arreglo
+			var amigos=["jose","ramon","antony"];
+			//Mostrar el arreglo
+			//document.write("Posicion 0-- "+amigos[0]);
+			//document.write("<br>");
+			//document.write("Posicion 1-- "+amigos[1]);
+			//document.write("<br>");
+			//document.write("Posicion 2-- "+amigos[2]);
+			//document.write("<br>");
+			
+			//Mostrar con bucle for
+			/*for(var i=0;i<amigos.length;i++){
+				document.write(amigos[i]+"<br>");
+			}
+			*/
+						
+			var posicion=prompt("Ingrese la posicion del Arreglo que desea modificar");
+			var amigosNuevo=prompt("Ingrese el nuevo valor para el arreglo");
+			
+			posicion=parseInt(posicion);
+			amigos[posicion]=amigosNuevo;
+			
+			document.write("Arreglo modificado...");
+			
+			for(var i=0;i<amigos.length;i++){
+				document.write("<br>"+amigos[i]+"<br>");
+			}
+		</script>
+	</body>
+</html>

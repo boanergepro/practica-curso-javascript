@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta  charset="utf-8">
+		<title>Ejercicio con Funciones y Formularios</title>
+	<head>
+	<body>
+		<form>
+			<input type="text" id="valor1">
+			<input type="text" id="valor2">
+			<input type="button" value="sumar" onclick="alert( suma() )">
+		</form>
+		<script>
+			var suma= function(numero1,numero2){
+				/*El texto  document.getElementById(" ")-- Sirve para ubicar un elemento en el documento html
+				que posea una Id especificada entre los (" ")*/
+				//Y el .value es para extraer el valor de dicho elemento.
+				var numero1= parseFloat(document.getElementById("valor1").value);
+				var numero2= parseFloat(document.getElementById("valor2").value);
+				var resultado= numero1+numero2;
+				return resultado;
+			}
+		</script>
+	</body>
+</html>
