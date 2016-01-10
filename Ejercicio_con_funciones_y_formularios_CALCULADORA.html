@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Funciones y Formularios</title>
+	</head>
+	<body>
+
+		<input type="text" id="valor1">
+		<input type="text" id="valor2">
+		<input type="button" value="Sumar" onclick="alert('El resultado de la suma es: ' + suma ('valor1','valor2')  );">
+		
+		<br/>
+
+		<input type="text" id="num1">
+		<input type="text" id="num2">
+		<input type="button" value="Sumar" onclick="alert('El resultado de la suma es: ' +suma('num1','num2') )";>
+		<script type="text/javascript">
+		//Esta es una funcion reutilizable
+			var suma= function(id_a,id_b){
+
+				var a= parseFloat(document.getElementById(id_a).value);//Extraer los valores
+
+				var b= parseFloat(document.getElementById(id_b).value);//Extraer los valores
+
+				var resultado= a+b;//Proceso
+
+				return resultado;//Retornara el resultado
+			}
+
+		</script>
+	</body>
+</html>
