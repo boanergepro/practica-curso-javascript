@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Agregando Nodos al DOM</title>
+</head>
+<body>
+	<ol>
+		<li>Venezuela Tirra Bendecida por Dios</li>
+		<li>Dios la Mayor esperanza para el Mundo</li>
+	</ol>
+	<script>
+		//Este codigo nos servira para agregar un elemento li al DOM
+		//Primero creamos el tipo de elemento
+		var elemento = document.createElement("li"),
+		//Luego creamos el contenido de dicho elemento
+			contenido = document.createTextNode("Nuevo Texto");
+		//Ahora unimos tanto el elemento como su contenido con el metodo appendChild()
+			elemento.appendChild(contenido);
+		//Ahora necesitamos acceder al padre de los elementos a los que queremos accerder.
+		/*En este caso vamos a acceder al padre del primer elemento li, el [0] designa la 
+		posicion del elemento y parentNode nos resgresa al padre de ese elemento li*/
+		var padre = document.getElementsByTagName("li")[0].parentNode,
+		//Ahora solo accerderemos al primer elemento li
+			primerElemento =  document.getElementsByTagName("li")[0];
+		/*Ahora vamos a insertar nuestro nuevo elemento ANTES del elemento li en la posicion 0
+		que especificamos arriba, pero antes le decimos quien es el padre de dicho elemento 
+		mediante la variable padre, luego con el metodo insertBefore() que resive dos parametros
+		el primero el elemento a agregar y el segundo el elemnto antes del cual agregara el nuevo.*/
+		padre.insertBefore(elemento, primerElemento);
+	</script>
+</body>
+</html>
