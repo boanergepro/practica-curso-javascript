@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Calculdor</title>
+	</head>
+	<body>
+		<form name="calculadora">
+			<!--Mostrar resultado-->
+			<input type="text" name="resultado" value="0" size="9">
+			<br>
+			<!--Botnones con las operaciones-->
+			<input type="button" value="+" onclick="calculador('+')">
+			<input type="button" value="-" onclick="calculador('-')">
+			<input type="button" value="*" onclick="calculador('*')">
+			<input type="button" value="/" onclick="calculador('/')">
+			<br>
+			<!--Primer campo de entrada-->
+			<input type="text"  name="operando1" size="9">
+			<br>
+			<!--Segundo campo de entrada-->
+			<input type="text"  name="operando2" size="9">
+		</form>
+		<script type="text/javascript">
+		
+			var calculador = function(operacion){
+
+				var operando1= document.calculadora.operando1.value,
+					operando2= document.calculadora.operando2.value,
+					result= eval(operando1 + operacion + operando2);
+
+				document.calculadora.resultado.value= result;
+			}
+			
+		</script>
+	</body>
+</html>
