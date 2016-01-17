@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Calculador version 1</title>
+</head>
+<body>
+	<input type="text" value="0" id="pantalla" size="10.2">
+	<br>
+	<input type="button" value="+" onclick="operacion('+')">
+	<input type="button" value="-" onclick="operacion('-')">
+	<input type="button" value="x" onclick="operacion('*')">
+	<input type="button" value="%" onclick="operacion('/')">
+	<br>
+	<input type="text" id="operando1" size="10.2">
+	<br>
+	<input type="text" id="operando2" size="10.2">
+
+	<script>
+		var operacion = function(signo){
+			
+			var operando1 = document.getElementById("operando1").value,
+				operando2 = document.getElementById("operando2").value,
+				result = eval(operando1 + signo + operando2);
+
+			document.getElementById("pantalla").value= result;
+
+		}
+	</script>
+</body>
+</html>
