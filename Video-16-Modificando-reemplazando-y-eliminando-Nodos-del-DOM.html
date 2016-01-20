@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Modificando, reemplazando y eliminando Nodos del DOM</title>
+</head>
+<body>
+	<ol>
+		<li id="primero">Venezuela, un pais de Sub-America con muchas riquezas</li>
+		<li>Una tierra bendecida</li>
+	</ol>
+	<script type="text/javascript">
+	/*
+	//Modificar elementos
+
+	//El metodo innerHTML =" " este se le puede pasar texto y ademas puede ejecutar codigo html
+	//El metodo textContent solo muestra tal cual lo que se le pase
+
+	var elemento = document.getElementById("primero");
+	//	elemento.textContent ="Nuevo <strong>texto</strong>"; el textContent mostrara esto tal caul
+		elemento.innerHTML = "Nuevo <strong>texto</strong>"; // el innerHTML ejecutara el html
+	*/
+	//-------------------------------------------------------------------------------------------------
+	/*
+	//Reemplazar elementos
+
+	//Usaremos el metodo replaceChild( , ) este recive dos parametros, el primero es el nuevo elemento
+	//y el segundo es el que queremos reemplazar
+
+	var elemento = document.createElement("li"),
+		contenido = document.createTextNode("Nuevo texto");
+		elemento.appendChild(contenido);
+
+	var padre= document.getElementsByTagName("li")[0].parentNode, //Accedemos al  padre del primer elemento li
+		referencia = document.getElementsByTagName("li")[0]; //Accedemos al elemento que queremos reemplazar
+		padre.replaceChild(elemento, referencia);
+	*/
+	//Eliminar
+
+	//Usaremos elm metodo removeChild() Este solo recive un parametro y es el mismo parametro que vamos a eliminar
+
+	var elemento = document.createElement("li"),
+		contenido = document.createTextNode("Nuevo texto");
+		elemento.appendChild(contenido);
+
+	var padre= document.getElementsByTagName("li")[0].parentNode, //Accedemos al  padre del primer elemento li
+		referencia = document.getElementsByTagName("li")[0]; //Accedemos al elemento que queremos reemplazar
+		padre.removeChild(referencia); // se le pasa el nodo que queremos eliminar
+	</script>
+</body>
+</html>
