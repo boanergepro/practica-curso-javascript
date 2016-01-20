@@ -1,0 +1,66 @@
+body{
+	background-image: url(fondo.jpg);
+	/*background-repeat: no-repeat;*/
+	background-size: cover;
+	font-family: 'Pacifico', cursive;
+	color: #5E0013;
+	text-align: center;
+}
+p{
+	margin: 0 auto;
+}
+.botones{
+	border-color: #3B3B3B;
+	background-color: #5E0013;
+	border-radius: 2.5px;
+	color: #FFA021;
+	height: 2.5em;
+	width: 2.5em;
+	margin-right: 5px;
+}
+.input-entrada{
+	margin-top: 0.5em;
+	color:#FFA021;
+	background-color: #3B3B3B;
+	width: 12em;
+	height: 2em;
+	display: inline-block;
+}
+.campos-entrada{
+	text-align: center;
+}
+.pantalla{
+	color: #FFA021;
+	background-color: #3B3B3B;
+	height: 2em;
+	width: 10em;
+	text-align: right;
+	margin: 0 auto;
+}
+.div-fonfo-pantalla{
+	text-align: center;
+	height: 2em;
+	width: 8em;
+	font-size: 1.5em;
+}
+.div-principal{
+	width: 15em;
+	height: 20em;
+	border-radius: 2em;
+	text-align: center;
+	background-color: #B4C2B2;
+	background-color: ; opacity: 0.8;
+	display: inline-block;
+	margin-top: 6em;
+}
+/*COLOR GRIS #1E1E1E*/
+
+/*COLOR GRIS MAS CLARO QUE EL ANTERIOR #3B3B3B*/
+
+/*COLOR VINOTINTO #5E0013*/
+
+/*AMARILLO QUEMADITO #FFA021*/
+
+/*GRIS SUPER CLARO #B4C2B2*/
+
+/*COLOR CREMA #FFFCC0*/

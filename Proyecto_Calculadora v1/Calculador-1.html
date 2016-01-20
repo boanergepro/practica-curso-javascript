@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Calculador-1</title>
+	<link rel="stylesheet" href="estilos.css">
+	<link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+</head>
+<body>
+
+	<div class="div-principal">
+
+		<div>
+			<h1>Calculadora</h1>
+		</div>
+		
+		<div class="div-fondo-pantalla">
+
+			<div id="pantalla" class="pantalla">
+			<p id="modificable">0</p>
+			
+			</div>
+		</div>
+
+		<br>
+		<input type="button" class="botones" value="+" onclick="operacion('+')">
+		<input type="button" class="botones" value="-" onclick="operacion('-')">
+		<input type="button" class="botones" value="x" onclick="operacion('*')">
+		<input type="button" class="botones" value="%" onclick="operacion('/')">
+		<br>
+		<div class="campos-entrada">
+			<input type="text" class="input-entrada" id="operando1" size="10.2">
+			<br>
+			<input type="text" class="input-entrada" id="operando2" size="10.2">
+		</div>
+		
+	</div>
+	
+	<script src="index.js"></script>
+</body>
+
+</html>
