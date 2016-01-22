@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Ejercicio JavaScript( acceso a los atributos)</title>
+	<style type="text/css">
+		div{
+			width: 200px;
+			height: 200px;
+			display: inline-block;
+			border: 1px solid #AAAAAA;
+			border-radius: 5em;
+			margin-top: 10em;
+		}
+		body{text-align: center;}
+		.azul{
+			background: #0074D9;
+			border: 1px solid #000;
+		}
+		.rojo{
+			background: #FF4136;
+			border: 1px solid #000;
+		}
+		.amarillo{
+			background: yellow;
+			border: 1px solid #000;
+			
+		}
+	</style>
+</head>
+<body>
+	<section>
+		<div id="id_div"></div>
+		<br/>
+		<button onclick="boton1()" class="amarillo">1</button>
+		<button onclick="boton2()" class="azul">2</button>
+		<button onclick="boton3()" class="rojo">3</button>
+	</section>
+	
+	<script>
+	var boton1 = function(){
+		var elemento = document.getElementById("id_div");
+			elemento.setAttribute("class","amarillo");
+	}
+	var boton2 = function(){
+		var elemento = document.getElementById("id_div");
+			elemento.setAttribute("class", "azul");
+	}
+	var boton3 = function(){
+		var elemento = document.getElementById("id_div");
+			elemento.setAttribute("class", "rojo");
+	} 
+	</script>
+</body>
+</html>
