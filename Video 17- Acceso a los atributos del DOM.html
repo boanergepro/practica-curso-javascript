@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Acceso a los atributos del DOM</title>
+	<style>
+		div{
+			width: 200px;
+			height: 200px;
+			background: #dddddd;
+			margin-right: 10px;
+			border: 1px solid #AAAAAA;
+			display: inline-block;
+		}
+		.azul{
+			background: #0074D9;
+			border: 1px solid #000;
+		}
+		.rojo{
+			background: #FF4136;
+			border: 1px solid #000;
+		}
+		.amarillo{
+			background: yellow;
+			border: 1px solid #000;
+		}
+	</style>
+</head>
+<body>
+
+	<section id="contenedor">
+		<div class=""></div>
+
+		<div class=""></div>
+
+	</section>
+
+	<script>
+	var elemento = document.createElement("div"),
+		padre = document.getElementById("contenedor"),
+		referencia = document.getElementsByTagName("div")[0];
+		padre.insertBefore(elemento, referencia);
+		elemento.setAttribute("class","rojo");
+	</script>	
+</body>
+</html>
