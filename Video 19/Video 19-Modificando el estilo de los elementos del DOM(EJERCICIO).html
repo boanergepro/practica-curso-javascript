@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Ejercicio</title>
+	<style>
+		body{
+			text-align: center;
+			float: none;
+		}
+		.normal{
+			width: 400px;
+			height: 250px;
+		}
+		.trancicion{
+			/*Esta es una animacion que consiste en un retraso*/
+			transition: 300ms all ease;
+		}
+		.grande{
+			width: 600px;
+			height: 400px;
+			text-align: center;
+		}
+		.boton{
+			color: #f2f2f2;
+			background-color: #5E0013;
+		}
+	</style>
+</head>
+<body>
+	<img id="img" src="open-source.jpg" class="normal trancicion" alt="">
+	<br/>
+	<input id="boton"type="button" value="cambiar tamaño" onclick="zoom();">
+
+	<script>
+			//Agregar estilos al input de tipo button
+			var elementoBoton = document.getElementById("boton");
+
+			elementoBoton.style.color = "#f2f2f2";
+			elementoBoton.style.backgroundColor ="#5E0013";
+			elementoBoton.style.fontSize ="1em";
+
+		var zoom = function(){
+			//Modificar las clases del Nodo img
+			var elementoImg = document.getElementById("img");
+
+			if(elementoImg.className == "normal trancicion"){
+				elementoImg.className = "grande trancicion";
+			}
+			else{
+				elementoImg.className = "normal trancicion";
+			}
+		}
+	</script>
+</body>
+</html>
