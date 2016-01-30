@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Agregando elementos dinamicamente a un arreglo</title>
+</head>
+<body>
+	<script>
+		var arreglo =[],
+			datoConteo;
+
+		datoConteo = parseInt(prompt("Ingrese el numero de elementos que desea que posea su arreglo: "));
+
+			for (var i = 1; i <= datoConteo; i++){
+				//Agregando los elementos nuevos en el ultimo lugar del arreglo
+				arreglo[arreglo.length] = parseFloat(prompt("Ingrese el elemento numero "+ i + " :"));
+			};
+
+		document.write("Los elementos agregados son: " + arreglo.join(", "));
+	</script>
+</body>
+</html>
