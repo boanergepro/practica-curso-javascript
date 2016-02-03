@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Ejemplo de uso del metodo map()</title>
+</head>
+<body>
+	<script>
+		var edades = [16,20,15,18];//Arreglo
+		/*En este caso usaremos el metodo map() para acceder a ciertos datos del arreglo, ya que este
+		puede recorrer un arreglo tal como lo hace un bucle un bucle por ejemplo.
+		
+		El metodo map() recive como parametro una funcion, en este caso usaremos una funcion
+		anonima, mejor conocida como CALLBACK. Esta a su vez puede recivir uno o tres parametros,
+		para este ejemplo la manejaremos con tres parametros para ver la funcionalidad de casa uno.
+		Parametros: 
+		**Objeto: Este se encarga de regresarnos el valor de x elemento en n posicion del arreglo.
+		**Indice: Este nos devolvera la posicion del arreglo en la que se ubica el elemento llamado
+		mediante el parametro Objeto.
+		**Arreglo: Se encargara de regresarnos todo el arreglo completo, es decir todos los valores.
+		*/
+		edades.map(function(Objeto, Indice, Arreglo){
+			document.write("Este es un elemento tan solo: <br>");
+			document.write("Elemento: " + Objeto + "<br>");
+			document.write("Posicion: " + Indice + "<br>");
+			document.write("Arreglo: " + Arreglo + "<br>");
+			document.write("----------------------------------<br>");
+		});
+	</script>
+</body>
+</html>
