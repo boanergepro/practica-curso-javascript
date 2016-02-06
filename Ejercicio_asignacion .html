@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Practica</title>
+</head>
+<body>
+	<script>
+		var arregloGlobal = [12,45,23,21,11,2,3,4,6,9,10,98,37,87,45,5,52,11,1,13,12,191,1,2,3,41,6,6,6,8,19,27,45];
+		document.write("Arreglo Original: " + arregloGlobal + "<br>");
+		//1) crear otro arreglo con Los números pares.
+		var arregloPar = [];
+		//2) crear otro arreglo con los numero impares
+		var arregloImpar = [];
+
+		arregloGlobal.map(function(Objeto, Indice, Arreglo){
+			if( Objeto % 2 == 0){
+				arregloPar.push(Objeto);
+			}
+			else{
+				arregloImpar.push(Objeto);
+			}
+		});
+		document.write("Arreglo par: " + arregloPar + "<br>");
+		document.write("Arreglo impar: " + arregloImpar + "<br>");
+		//3) cálculo de la media del arreglo completo, del arreglo de pares e impares
+			//Calculo de la media del arreglo global
+			var acumuladorGlobal = 0;
+			arregloGlobal.map(function(Objeto){	
+				acumuladorGlobal += Objeto;
+			});
+			var result = acumuladorGlobal / arregloGlobal.length;
+			document.write("La media del arreglo global es: " + result + "<br>");
+
+			//Calculo de la madia del arreglo par
+			var acumuladorPar = 0
+			arregloPar.map(function(Objeto){
+				acumuladorPar += Objeto;
+			});
+			var result = acumuladorPar / arregloPar.length;
+			document.write("La media del arreglo par es: " + result + "<br>");
+			//Calculo de la media del arreglo impar
+			var acumuladorImpar = 0;
+			arregloImpar.map(function(Objeto){
+				acumuladorImpar += Objeto;
+			});
+			var result = acumuladorImpar / arregloImpar.length;
+			document.write("La media del arreglo impar es: " + result + "<br>");
+		//4) buscar el valor que mas se repite en el Arreglo
+			var cuentaActual = 0,
+				cuentaAnterior = 0,
+				maxPosicion = 0;
+
+			for(i in arregloGlobal){
+				for(j in arregloGlobal){
+					if(arregloGlobal[i] == arregloGlobal[j]){
+						cuentaActual++;
+					}
+				}
+				if(cuentaActual > cuentaAnterior){
+					cuentaAnterior = cuentaActual;
+					maxPosicion = i;
+				}
+				cuentaActual = 0;
+			}
+			document.write("El elemento que mas se repite es: " + arregloGlobal[maxPosicion]);
+	</script>
+</body>
+</html>
+
+<!--
+
+Teniendo el siguiente arreglo realice:
+
+var arreglo =[12,45,23,21,11,2,3,4,6,9,10,98,37,87,45,5,52,11,1,13,12,191,1,2,3,41,6,6,6,8,19,27,45]
+
+1) crear otro arreglo con Los números pares
+
+2) crear otro arreglo con los numero impares
+
+3) cálculo de la media del arreglo completo, del arreglo de pares e impares
+
+4) buscar el valor que mas se repite en el Arreglo
+-->
