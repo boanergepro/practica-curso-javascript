@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang = "en">
+    <head>
+        <meta charset="utf-8">
+        <title>Trabajando con timers en JavaScript con timeout y interval</title>
+    </head>
+    <body>
+        <script>
+            
+            //Timeout
+            var saludo = function(){
+                console.log("Saludo!");
+            };
+            setTimeout(saludo, 3000);
+            
+            //Interval
+            var contador = 0;
+            var saludo2 = function(){
+                contador++;
+                console.log(contador);
+                
+                if(contador == 5){
+                    //Recive como parametro la direccion del setInterval, en este caso el de la variable.
+                    clearInterval(interval);
+                };
+            };
+            var interval = setInterval(saludo2, 2000);
+        </script>
+    </body>
+</html>
