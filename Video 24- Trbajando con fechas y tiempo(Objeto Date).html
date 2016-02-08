@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>El Objeto Date, para manipular fechas y el tiempo</title>
+</head>
+<body>
+	
+</body>
+<script>
+	(function(){
+		var fecha = new Date();
+		document.write(fecha);
+		//Tiempo
+		console.log("Hora: " + fecha.getHours());//Horas
+		console.log("Minutos: " + fecha.getMinutes());//Minutos
+		console.log("Segundos: " + fecha.getSeconds());//Segundos
+		//Fecha
+		console.log("Dia: " + fecha.getDay());//Dia de la semana
+		console.log("Dia del mes: " + fecha.getDate());//Dia del mes
+		console.log("Mes: " + fecha.getMonth());//Mes del año
+		console.log("Año: " + fecha.getFullYear());//El año
+
+	}());
+</script>
+</html>
