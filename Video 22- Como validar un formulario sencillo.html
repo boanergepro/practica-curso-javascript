@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Como validar un formulario sencillo</title>
+</head>
+<body>
+	<form name="formulario" method="get">
+		<input type="text" name="nombre" maxlength="30" placeholder = "Nombre:">
+		<br>
+
+		<input type="radio" name="sexo"  value="Hombre"> Hombre
+		<input type="radio" name="sexo" value="Mujer"> Mujer
+		<br>
+
+		<input type="checkbox" name="terminos" > Acepto los Terminos y condiciones
+		<br>
+
+		<input type="submit" value="Enviar" id="btn">
+	</form>
+	<script>
+		var formulario = document.getElementsByName("formulario")[0], //Accediend al elemento formulario
+			boton = document.getElementById("btn");
+
+			var validarNombre = function(e){
+				//Validando que el campo Nombre no este vacio al enciar el formulario
+				if(formulario.nombre.value == 0){ 
+					alert("Por favor rellena el campo nombre.");
+					//Prevenir el evento
+					e.preventDefault();
+				}
+
+			};
+			var validarRadio = function(e){
+				//Validar si se selecciono alguno de los redio button o no
+				if(formulario.sexo[0].checked == true || formulario.sexo[1].checked == true){
+					
+				}else{
+					alert("Por favor cumpla con el campo sexo.");
+					//Prevenir el evento
+					e.preventDefault();
+				}
+			};
+			var validarCheckbox = function(e){
+				if(formulario.terminos.checked == false){
+					alert("Debes aceptar lor terminos para continuar.");
+					e.preventDefault();
+				}
+			};
+			var validar = function(e){
+				validarNombre(e);
+				validarRadio(e);
+				validarCheckbox(e);
+			};
+			formulario.addEventListener("submit", validar);
+	</script>
+</body>
+</html>
