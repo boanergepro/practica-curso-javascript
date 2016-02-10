@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Algunos metodos para los arreglos.!</title>
+</head>
+<body>
+	<script>
+		//Metodo filter()--> Sirve para crear un arreglo si lo que retorna es true
+		//Este recive como parametro un CALLBACK que se esncargara de realizar alguna funcion
+		//Ejemplo: Crear un arreglo con los elementos pares del arreglo con nombre arreglo.
+			var arreglo = [2,5,6,7,8,9,2,3,5,4,4],
+				arregloNuevo = arreglo.filter(function(numero){
+					return numero % 2 == 0;
+				}); 
+				console.log("Usando el metodo filter() --> Arreglo con los elementos pares: " + arregloNuevo);
+		//Metodo sort()--> Sirve principalmente para ordenar todo en oreden alfabetico.
+		//Pero podemos hacer que este nos sirva para ordenar los numero del menor al mayor y viseversa.
+		//para eso debemos pasarle como parametro una funcion que haga esto y retorne true.
+			var arregloNumerico = [5,7,6,4,8,9,3,1,2,10]; 
+			arregloNumerico.sort(function(a,b){
+				return a - b;
+			});
+			console.log("Usando el metodo sort() --> Ordenar los numeros: " + arregloNumerico);
+		//Metodo reverse()--> Este solo invierte el orden actual de los elementos de un arreglo.
+			arregloNumerico.reverse();
+			console.log("Usando el metodo reverse() --> Invertir el orden del arreglo anterior: " + arregloNumerico);
+	</script>
+</body>
+</html>
