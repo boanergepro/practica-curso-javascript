@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Ejercio con arreglos</title>
+</head>
+<body>
+	<script>
+		var arreglo = [18.34,2345.232,3242.2,763.23,2323.1,2321.23,123,21.123,12313.12];
+		document.write("Arreglo original: " + arreglo);
+		//Buscar el valor mayor en el arreglo
+		var mayor = 0;
+		for(i in arreglo){
+			for (j in arreglo) {
+				if(arreglo[i] > arreglo[j]){
+					mayor = arreglo[i];
+				}
+			};
+		}
+		console.log("El mayor es: " + mayor);
+		//Buscar el valor menor en el arreglo
+		var menor = 0;
+		for(i in arreglo){
+			for (j in arreglo) {
+				if (arreglo[i] < arreglo[j]){
+					menor = arreglo[i];
+				};
+			};
+		}
+		console.log("El menor es: " + menor);
+		//Crear otro arreglo con los mismos valores pero multiplicados por 2
+		var arregloX2 = [],
+			elemento = 0;
+			for(i in arreglo){
+				elemento = arreglo[i] * 2;
+				arregloX2.push(elemento);
+			}
+		console.log("Este es el arreglo con los elementos multiplicados por 2: " + arregloX2);
+		//crear otro arreglo con los mismos valores pero elevados al cuadrado
+		var arregloEleve2 = [],
+			elemento = 0;
+			for (i in arreglo) {
+				elemento = arreglo[i] * arreglo[i];
+				arregloEleve2.push(elemento);
+			}
+			console.log("Este es el arreglo con los valores elevados a la 2: " + arregloEleve2);	
+	</script>
+</body>
+</html>
