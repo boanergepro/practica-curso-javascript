@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Como usar forEach()</title>
+</head>
+<body>
+	<script type="text/javascript">
+	//Los metodos forEach y map tienen unfuncionamiento muy similar ya que ambos permitenn iterar elementos de un arreglo..
+	/*map()--> la operacion que realizae map() sobre los elementos de un arreglo pueden ser almacenada en una nueva variable, la cual pasara a ser un nuevo arreglo con las modificaciones que haya hecho el metodo map() sobre los elementos, quedando de esta manera intactos los elementos del arreglo original.*/
+	/*forEach()--> A diferencia de amap() este si va a modificar el arreglo original ya que este no se puede almacenar en una  variable para que la convierta en un nuevo arreglo, este metodo solo retorna el arreglo originl con las modificaciones.*/
+	//Uso de forEach()--> Ejemplo: Elevar los elementos de un arreglo a 2.
+	var arregloNumeros = [2,6,88,9,7,10,245,678,666,788654,568];
+	console.log("Arreglo original: " + arregloNumeros);
+	arregloNumeros.forEach(function(elemento,posicion,arreglo){
+		arreglo[posicion] = Math.pow(elemento,2);
+	});
+	console.log("Arreglo modificado, elevado al cuadrado: " + arregloNumeros);
+	</script>
+</body>
+</html>
