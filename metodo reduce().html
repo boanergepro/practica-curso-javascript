@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Uso del Metodo reduce().</title>
+</head>
+<body>
+	<script type="text/javascript">
+	//El metodo reduce() accede a cada uno de los elementos de un vector o arreglo(de izquierda a derecha), y aplica una funcion a un acumulador para reducir el vector a un unico valor.
+	var arreglo = ["H","O","L","A"];
+	var palabra = arreglo.reduce(function(valorAnterior,valorActual,indice,arreglo){
+		return valorAnterior + valorActual;
+	});
+	//console.log(arreglo.join("")); HECHO CON JOIN()
+	console.log(palabra);
+	//Sumar lo valores de un arreglo
+	arreglo2 = [2,3,7,2,1];
+	var suma = arreglo2.reduce(function(valorAnterior,valorActual){
+		return valorAnterior + valorActual;
+	});
+	console.log(suma);
+	//Asignandole otro parametro a reduce, este va a ser el valor inicial, es decir que en el primer recorrido el parametro valorAnterior va a ser igual a ese valor inicial
+	var arreglo3 = [2,3,7,2,1];
+	var suma2 = arreglo3.reduce(function(valorAnterior,valorActual){
+		return valorActual + valorAnterior;
+	},5/*Este 5 es el valor inicial*/);
+	console.log(suma2);
+
+	</script>
+</body>
+</html>
