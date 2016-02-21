@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>JSON == Javascript Objet Notation</title>
+</head>
+<body>
+	<script>
+		//JSON == Javascript Objet Notation => Notacion de en objetos en javascript
+		//Un JSON es como un diccionario, dentro del JSON el simbolo " : " es igual a " = ". (Para asiganar un valor a una clave).
+		/*
+		Un JSON puede recibir un funcion dentro igualmente.
+		Cada elemento del json va separadp por coma, esecto el ultimo ya que eso le haria pensar al 
+		interprete que falta otra clave (Con clave me refiero a cada atributo del JSON).
+		*/
+		var carro = {
+			peso : 1 + " tonelada",
+			color : "Rojo",
+			marca: "Nissan",
+			automovil: function(){
+				//La palabra reservada this nos permite hacer referencia al elemeno en el que nos encontramos, en este caso detron del JSON carro, por lo  tanto aqui la palabra this hace referncia a carro.
+				console.log("El automovil es un "+ this.marca +" de color "+ this.color +" y que pesa "+this.peso);
+			}
+		};
+		//Accerder a elementods del JSON, dos formas
+		console.log("El automovil pesa : " + carro.peso);
+		console.log("El automovil pesa : " + carro["peso"]);
+		console.log("----------------------------------------");
+		//Accedeiendo a la clave automovil que tiene una funcion
+		console.log(carro.automovil());
+	</script>
+</body>
+</html>
